@@ -19,6 +19,19 @@ public class Dish {
         this.type = type;
     }
 
+    public CaloricLevel  getCaloricLevel () {
+
+        if (this.getCalories() > 0 && this.getCalories() <= 400)
+            return CaloricLevel.DIET;
+
+        if (this.getCalories() > 400 && this.getCalories() <= 700)
+            return CaloricLevel.NORMAL;
+
+       // if (this.getCalories() > 700)
+            return CaloricLevel.FAT;
+
+    }
+
     public String getName() {
         return name;
     }
